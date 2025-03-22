@@ -1,0 +1,62 @@
+# site_name: ER CCAPI Python Package
+# # theme:
+# #   name: material
+# #   primary: yellow
+# #   logo: assets/ER_logo_beside_name.svg
+# #   palette:
+# #     - scheme: default
+# #         toggle:
+# #           icon: material/weather-night
+# #           name: Switch to dark mode
+# #     - scheme: slate
+# #         toggle:
+# #           icon: material/weather-sunny
+# #           name: Switch to light mode
+
+site_name: CCAPI Python Package
+site_description: Documentation
+theme:
+  name: material
+  logo: assets/ER_logo_beside_name.svg
+  favicon: assets/favicon.png
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - content.code.annotate
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: black
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+      primary: indigo
+  features:
+    - content.code.copy
+plugins:
+  - mkdocstrings
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+nav:
+  - Welcome: index.md
+  - Installation: installation.md
+  - Robot: robot.md
+  - query_helper.md
+  - examples.md
